@@ -143,14 +143,18 @@ def updata_film(con, subject, key, value):  # 插入电影详细信息到数据�
         print(sql)
 
 
-# 调用测试
-# print(get_user('july'))
-# print(get_users())
-# print(user_login('july', '123'))
-# print(get_film(1293116))
-# like = '科幻'
-# sort = ''
-# page = 0
-# result = get_films(like, sort, page)
-# for i in result:
-#     print("%s \t %s " % (i[0], i[1]))
+def main():
+    print(get_user('july'))
+    print(get_users())
+    print(user_login('july', '123'))
+    print(get_film(1293116))
+    like = '科幻'
+    sort = ''
+    page = 0
+    result = get_films(like, sort, page)
+    for i in result:
+        print("%s \t %s " % (i[0], i[1]))
+
+
+if __name__ == '__main__':
+    main()

@@ -24,7 +24,7 @@ def similar_films(like: str, sort: str, page: int) -> list:
         notes[info[0]] = str(info[0]) + str(info[1]) + str(info[2]) + str(
             info[3]) + str(info[5]) + str(info[6]) + str(info[14])
     stop_words = []  # 读取停止字到列表中
-    with open('./data/stop_words.txt', 'rb') as obj:
+    with open('./source/stop_words.txt', 'rb') as obj:
         stop_words = obj.readlines()
     key_words = []
     for i, (mvn, word) in enumerate(notes.items()):

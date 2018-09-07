@@ -1,10 +1,12 @@
 # MovieRecommendationSystem
 
-该项目基于 Python Flask Web 开发框架，通过从豆瓣电影获取的电影数据，进行电影推荐算法实现，并实现可视化。
-
 ## 1. 项目简介
 
+该项目基于 Python Flask Web 开发框架，通过从豆瓣电影获取的电影数据，进行电影推荐算法实现，并实现可视化。
+
 ## 2. 效果展示
+
+![演示图](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/source/demonstration.gif)
 
 ## 3. 三个推荐算法
 

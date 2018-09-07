@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录豆瓣</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='img/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+    <style type="text/css">
+        .fright {
+            float: right;
+        }
+
+        .icp {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="header">
+            <a href="" class="logo">登录豆瓣</a>
+        </div>
+        <div id="content">
+            <h1>登录豆瓣</h1>
+            <div class="article">
+                {% block form %} {% endblock %}
+            </div>
+            <ul id="side-nav" class="aside">
+                <li>&gt;&nbsp;还没有豆瓣帐号？
+                    <a rel="nofollow" href="">立即注册</a>
+                </li>
+                <li>&gt;&nbsp;
+                    <a href="">点击下载豆瓣移动应用</a>
+                </li>
+            </ul>
+        </div>
+        <div id="footer " style="color: #999;padding-top: 6px;border-top: 1px dashed #ddd;">
+            <span id="icp " class="fleft gray-link ">&copy; 2005－2018 douban.com, all rights reserved</span>
+            <span class="fright ">
+                <a href=" ">关于豆瓣</a>
+                ·
+                <a href=" ">在豆瓣工作</a>
+                ·
+                <a href=" ">联系我们</a>
+                ·
+                <a href=" ">免责声明</a>
+                ·
+                <a href=" ">帮助中心</a>
+                ·
+                <a href=" ">开发者</a>
+                ·
+                <a href=" ">移动应用</a>
+                ·
+                <a href=" ">豆瓣广告</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

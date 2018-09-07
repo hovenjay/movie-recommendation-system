@@ -1,0 +1,262 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    color: #111;
+}
+
+i {
+    font-style: normal;
+    font-weight: normal;
+}
+
+.related-info h2 {
+    color: #007722;
+}
+
+.related-info {
+    width: 675px;
+}
+
+.related-info h2 {
+    margin: 24px 0 12px 0;
+    font-size: 16px;
+}
+
+.pl {
+    font: 12px Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    color: #666666;
+}
+
+.pil {
+    height: 48px;
+    width: 48px;
+}
+
+#subject-others-interests {
+    margin-bottom: 40px;
+    word-wrap: break-word;
+    width: 300px;
+}
+
+html body,
+html td,
+html th,
+html .pl,
+html input {
+    font-size: 13px;
+}
+
+.indent {
+    margin-bottom: 30px;
+    word-break: break-all;
+}
+
+body,
+td,
+th {
+    font: 12px Helvetica, Arial, sans-serif;
+    line-height: 1.62;
+}
+
+#recommendations {
+    width: 675px;
+}
+
+.article .related-info h2,
+#celebrities h2,
+#author-wrapper .author h2,
+.related-pic h2,
+#recommendations h2 {
+    margin-bottom: 12px;
+}
+
+.related-info h2,
+.related-pic h2,
+#recommendations h2 {
+    margin: 24px 0 3px 0;
+}
+
+#recommendations h2 {
+    color: #007722;
+}
+
+html h2 {
+    font-size: 16px;
+}
+
+#recommendations .recommendations-bd {
+    /* width: 716px; */
+    margin-right: -25px;
+    letter-spacing: -0.31em;
+}
+
+#recommendations .recommendations-bd dl {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: normal;
+    /* float: left; */
+    margin: 0 25px 15px 0;
+    overflow: hidden;
+}
+
+#recommendations .recommendations-bd dt {
+    height: 161px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+#recommendations .recommendations-bd dt,
+#recommendations .recommendations-bd dd {
+    width: 115px;
+}
+
+#recommendations img {
+    max-width: 100%;
+}
+
+a img {
+    border-width: 0;
+    vertical-align: middle;
+}
+
+#recommendations .recommendations-bd dd {
+    font-size: 13px;
+    text-align: center;
+}
+
+#recommendations .recommendations-bd dt,
+#recommendations .recommendations-bd dd {
+    width: 115px;
+}
+
+dd {
+    display: block;
+    /*  -webkit-margin-start: 40px;*/
+}
+
+h2 {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 150%;
+}
+
+.tags {
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.tags-body {
+    line-height: 24px;
+    letter-spacing: -0.31em;
+}
+
+.tags-body a:link,
+.tags-body a:visited {
+    background-color: #f5f5f5;
+    color: #37A;
+}
+
+.tags-body a {
+    display: inline-block;
+    letter-spacing: normal;
+    margin: 0 8px 8px 0;
+    padding: 0 8px;
+    /*background-color: #f5f5f5;*/
+    /* -webkit-border-radius: 2px;*/
+    /* -moz-border-radius: 2px;*/
+    border-radius: 2px;
+}
+
+.tags a:hover {
+    color: #3377AA;
+    background: #D5D5D5;
+}
+
+#subject-others-interests {
+    margin-bottom: 40px;
+    word-wrap: break-word;
+}
+
+#subject-others-interests ul {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#subject-others-interests li {
+    overflow: hidden;
+    padding: 12px 0;
+    border-bottom: 1px dashed #DDD;
+    line-height: 1.5;
+    color: #666;
+}
+
+#subject-others-interests .others-interest-avatar {
+    float: left;
+    margin-right: 12px;
+}
+
+.grid-16-8 .aside {
+    width: 300px;
+    float: right;
+}
+
+/* ----------------------------- */
+
+#subject-others-likers img {
+    max-width: 100%;
+}
+
+#subject-others-likers .subject-others dd {
+    font-size: 13px;
+    text-align: center;
+}
+
+#subject-others-likers .subject-others dt,
+#subject-others-likers .subject-others dd {
+    width: 115px;
+}
+
+#subject-others-likers .subject-others dt {
+    height: 161px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+#subject-others-likers .subject-others dl {
+    display: inline-block;
+    vertical-align: top;
+    word-spacing: normal;
+    letter-spacing: normal;
+    margin: 0 25px 15px 0;
+    overflow: hidden;
+}
+
+#subject-others-likers .subject-others {
+    margin-right: -25px;
+    letter-spacing: -0.31em;
+}
+
+#subject-others-likers {
+    width: 300px;
+    margin-bottom: 20px;
+    float: right;
+}
+
+#subject-others-likers h2 {
+    margin: 5px 0 12px 0;
+    color: #007722;
+    font-size: 16px;
+    line-height: 150%;
+    font: 15px Arial, Helvetica, sans-serif;
+}
+
+i {
+    font-style: normal;
+    font-weight: normal;
+}

@@ -1,0 +1,53 @@
+<!-- 继承布局文件 -->
+{% extends 'login_layout.html' %}
+<!-- 登陆表单 -->
+{% block form %}
+<form id="lzform" name="lzform" method="post" action="{{ url_for('login_form') }}">
+    <div style="display:none;">
+        <img src="{{ url_for('static',filename='img/blank.gif') }}" />
+    </div>
+    <input name="source" type="hidden" value="movie" />
+    <input name="redir" type="hidden" value="" />
+    <div id="item-error">
+        <p class="error">{% if message %} {{ message }} {% endif %}</p>
+    </div>
+    <div class="item-right">
+        <a href="">手机验证码登录</a>
+    </div>
+    <div class="item">
+        <label>帐号</label>
+        <input id="text" name="username" type="text" class="basic-input" maxlength="60" placeholder="用户名" tabindex="1" required autofocus/>
+    </div>
+    <div class="item">
+        <label>密码</label>
+        <input id="password" name="password" type="password" class="basic-input" maxlength="20" tabindex="2" placeholder="密码" required/>
+    </div>
+    <div class="item">
+        <label>&nbsp;</label>
+        <p class="remember">
+            <input type="checkbox" id="remember" name="remember" tabindex="4" />
+            <label for="remember" class="remember">下次自动登录</label>
+            |
+            <a href="">忘记密码了</a>
+        </p>
+    </div>
+    <div class="item">
+        <label>&nbsp;</label>
+        <input type="submit" value="登录" name="login" class="btn-submit" tabindex="5" />
+    </div>
+    <div class="item item-3rd">
+        <label>
+            第三方登录：
+        </label>
+        <a href="" class="item-wechat">
+            <img src="{{ url_for('static',filename='img/connect_wechat.png') }}" title="微信">
+        </a>
+        <a href="" class="item-weibo">
+            <img src="{{ url_for('static',filename='img/connect_sina_weibo.png') }}" title="新浪微博">
+        </a>
+        <a href="" class="item-qq">
+            <img src="{{ url_for('static',filename='img/connect_qq.png') }}" title="QQ">
+        </a>
+    </div>
+</form>
+{% endblock %}

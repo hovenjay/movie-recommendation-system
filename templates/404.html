@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Security-Policy" content="">
+    <title>页面不存在</title>
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+    <!-- 豆瓣网的首部 -->
+    <div id="db-global-nav" class="global-nav">
+        <div class="bd">
+            <div class="top-nav-info">
+                <a href="" id="login_status1" class="nav-login">登录</a>
+                <a href="" id="login_status2" class="nav-register">注册</a>
+            </div>
+            <div class="top-nav-doubanapp">
+                <a href="" class="lnk-doubanapp">下载豆瓣客户端</a>
+                <div id="top-nav-appintro" class="more-items">
+                    <p class="appintro-title">豆瓣</p>
+                    <p class="qrcode">扫码直接下载</p>
+                    <div class="download">
+                        <a href="">iPhone</a>
+                        <span>·</span>
+                        <a href="" class="download-android">Android</a>
+                    </div>
+                    <div id="doubanapp-tip">
+                        <a href="" class="tip-link">豆瓣 5.0 全新发布</a>
+                        <a href="javascript: void 0;" class="tip-close">×</a>
+                    </div>
+                </div>
+            </div>
+            <div class="global-nav-items">
+                <ul>
+                    <li class="">
+                        <a href="/">豆瓣</a>
+                    </li>
+                    <li class="">
+                        <a href="/">读书</a>
+                    </li>
+                    <li class="on">
+                        <a href="/">电影</a>
+                    </li>
+                    <li class="">
+                        <a href="/">音乐</a>
+                    </li>
+                    <li class="">
+                        <a href="/">同城</a>
+                    </li>
+                    <li class="">
+                        <a href="/">小组</a>
+                    </li>
+                    <li class="">
+                        <a href="/">阅读</a>
+                    </li>
+                    <li class="">
+                        <a href="/">FM</a>
+                    </li>
+                    <li class="">
+                        <a href="/">时间</a>
+                    </li>
+                    <li class="">
+                        <a href="">豆品</a>
+                    </li>
+                    <li>
+                        <a href="#more" class="bn-more">
+                            <span>更多</span>
+                        </a>
+                        <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="/">豆瓣摄影</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索部分 -->
+    <div id="db-nav-movie" class="nav">
+        <div class="nav-wrap">
+            <div class="nav-primary">
+                <div class="nav-logo">
+                    <a href="/">豆瓣电影</a>
+                </div>
+                <div class="nav-search">
+                    <form action="#" method="get">
+                        <fieldset>
+                            <legend>搜索：</legend>
+                            <label for="inp-query">
+                            </label>
+                            <div class="inp">
+                                <input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影、电视剧、综艺、影人" value="" autocomplete="off">
+                            </div>
+                            <div class="inp-btn">
+                                <input type="submit" value="搜索">
+                            </div>
+                            <input type="hidden" name="cat" value="1002">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="nav-secondary">
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <a href="/">影讯&amp;购票</a>
+                    </li>
+                    <li>
+                        <a href="/">选电影</a>
+                    </li>
+                    <li>
+                        <a href="/">电视剧</a>
+                    </li>
+                    <li>
+                        <a href="/">排行榜</a>
+                    </li>
+                    <li>
+                        <a href="/">分类</a>
+                    </li>
+                    <li>
+                        <a href="/">影评</a>
+                    </li>
+                    <li>
+                        <a href="/">2017年度榜单</a>
+                    </li>
+                    <li>
+                        <a href="/">2017观影报告</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div id="wrapper">
+        <div style="margin:100px auto; width:350px;">
+            <img style="float:left;" src="{{ url_for('static', filename='img/douban_error.gif') }}">
+            <ul style="margin-left:40px; list-style-type:none; list-style-image: none; list-style-position:outside;">
+                <li style="list-style-type:none; list-style-image:none; list-style-position:outside; font-size:14px; line-height: 32px;">呃...你想访问的页面不存在</li>
+                <li style="list-style-type:none; list-style-image:none; list-style-position:outside; color:#666;">&nbsp;</li>
+                <li style="list-style-type:none; list-style-image:none; list-style-position:outside; color:#666;">&gt;
+                    <span id="f3s">3</span>秒后
+                    <a href="/">返回首页</a>
+                    <script src="/static/js/jquery-1.11.1.js"></script>
+                    <script type="text/javascript">
+                        (function () {
+                            var secs = 3,
+                                si = setInterval(function () {
+                                    if (--secs) {
+                                        $('#f3s').text(secs);
+                                    } else {
+                                        location.href = "/";
+                                        clearInterval(si);
+                                    }
+                                }, 1000)
+                        })();
+                    </script>
+                </li>
+            </ul>
+        </div>
+        <!-- 页脚 -->
+        <div id="footer">
+            <span id="icp" class="fleft gray-link">
+                © 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司
+            </span>
+            <a href="#" style="display: none;"></a>
+            <span class="fright">
+                <a href="#">关于豆瓣</a>
+                ·
+                <a href="#">在豆瓣工作</a>
+                ·
+                <a href="#">联系我们</a>
+                ·
+                <a href="#">免责声明</a>
+                ·
+                <a href="#">帮助中心</a>
+                ·
+                <a href="#">手机音乐</a>
+                ·
+                <a href="#">豆瓣广告</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

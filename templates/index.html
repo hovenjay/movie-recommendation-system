@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>豆瓣电影</title>
+    <link type="image/x-icon" rel="shortcut icon" href="/static/img/favicon.png">
+    <link type="text/css" rel="stylesheet" href="/static/css/main.css">
+    <link type="text/css" rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+    <!-- 全局导航栏 -->
+    <div id="db-global-nav" class="global-nav">
+        <div class="bd">
+            <!-- 右 -->
+            <div class="top-nav-info">
+                <a id="login_status1" class="nav-login" rel="nofollow">登录</a>
+                <a id="login_status2" class="nav-register" rel="nofollow">注册</a>
+            </div>
+            <!-- 中 -->
+            <div class="top-nav-doubanapp">
+                <a href="" class="lnk-doubanapp">下载豆瓣客户端</a>
+                <div id="top-nav-appintro" class="more-items">
+                    <p class="appintro-title">豆瓣</p>
+                    <p class="qrcode">扫码直接下载</p>
+                    <div class="download">
+                        <a href="">iPhone</a>
+                        <span>·</span>
+                        <a href="" class="download-android">Android</a>
+                    </div>
+                    <div id="doubanapp-tip">
+                        <a href="" class="tip-link">豆瓣 5.0 全新发布</a>
+                        <a href="javascript: void 0;" class="tip-close">×</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 左 -->
+            <div class="global-nav-items">
+                <ul>
+                    <li class="">
+                        <a href="" target="_blank">豆瓣</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">读书</a>
+                    </li>
+                    <li class="on">
+                        <a href="" target="_blank">电影</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">音乐</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">同城</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">小组</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">阅读</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">FM</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">时间</a>
+                    </li>
+                    <li class="">
+                        <a href="" target="_blank">豆品</a>
+                    </li>
+                    <li>
+                        <a href="#more" class="bn-more">
+                            <span>更多</span>
+                        </a>
+                        <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="" target="_blank">豆瓣摄影</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 电影导航 -->
+    <div id="db-nav-movie" class="nav">
+        <div class="nav-wrap">
+            <div class="nav-primary">
+                <div class="nav-logo">
+                    <a href="">豆瓣电影</a>
+                </div>
+                <div class="nav-search">
+                    <form action="" method="get">
+                        <fieldset>
+                            <legend>搜索：</legend>
+                            <label for="inp-query">
+                            </label>
+                            <div class="inp">
+                                <input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影..." value="" autocomplete="off">
+                            </div>
+                            <div class="inp-btn">
+                                <input type="submit" value="搜索">
+                            </div>
+                            <input type="hidden" name="cat" value="1002">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="nav-secondary">
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <a href="">影讯&amp;购票</a>
+                    </li>
+                    <li>
+                        <a href="">选电影</a>
+                    </li>
+                    <li>
+                        <a href="">电视剧</a>
+                    </li>
+                    <li>
+                        <a href="">排行榜</a>
+                    </li>
+                    <li>
+                        <a href="">分类</a>
+                    </li>
+                    <li>
+                        <a href="">影评</a>
+                    </li>
+                    <li>
+                        <a href="">2017年度榜单</a>
+                    </li>
+                    <li>
+                        <a href="">2017观影报告</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主容器 -->
+    <div id="wrapper">
+        <!-- 正文 -->
+        <div id="content">
+            <h1>选影视</h1>
+            <div class="grid-16-8 clearfix">
+                <div class="article">
+                    <div id="app">
+                        <div>
+                            <div class="article">
+                                <div class="tags">
+                                    <ul class="category">
+                                        <li>
+                                            <span class="tag-checked tag">全部类型</span>
+                                        </li>
+                                        <li>
+                                            <a class="tag">剧情</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">喜剧</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">动作</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">爱情</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">科幻</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">动画</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">悬疑</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">惊悚</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">恐怖</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">纪录片</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">短片</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">情色</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">同性</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">音乐</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">歌舞</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">家庭</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">儿童</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">传记</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">历史</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">战争</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">犯罪</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">西部</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">奇幻</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">冒险</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">灾难</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">武侠</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">古装</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">运动</a>
+                                        </li>
+                                        <li>
+                                            <a class="tag">黑色电影</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tag-nav">
+                                    <div class="tabs">
+                                        <a href="#" class="tab-checked" value="DESC">按评分从高到低排序</a>
+                                        <a href="#" class="tab" value="ASC">按评分从低到高排序</a>
+                                    </div>
+                                </div>
+                                <div class="list-wp" id="films">
+                                </div>
+                                <div class="empty" style="display: none; line-height: 200px;">
+                                    <p>当前筛选没有找到结果</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <div class="mobile-app-entrance block5 app-movie">
+                        <a class="entrance-link" href="">
+                            <div class="entrance-qrcode">
+                                <img src="/static/img/qrcode.png" alt="扫码下载豆瓣 App" width="80" height="80">
+                            </div>
+                            <div class="entrance-info">
+                                <span class="app-icon icon-movie"></span>
+                                <span class="main-title">豆瓣</span>
+                                <span class="sub-title">你的口味我知道</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="doubanapp6"></div>
+                    <div id="recomandDiv" class="fixed">
+                        <h2>
+                            <i class="">推荐以下电影</i>· · · · · ·
+                        </h2>
+                        <div id="recommandfilms" class="mobile-app-entrance block5 app-movie"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div id="footer">
+            <div class="footer-extra"></div>
+            <span id="icp" class="fleft gray-link">
+                © 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司
+            </span>
+            <a href="" style="display: none;"></a>
+            <span class="fright">
+                <a href="">关于豆瓣</a>
+                ·
+                <a href="">在豆瓣工作</a>
+                ·
+                <a href="">联系我们</a>
+                ·
+                <a href="">免责声明</a>
+                ·
+                <a href="" target="_blank">帮助中心</a>
+                ·
+                <a href="">移动应用</a>
+                ·
+                <a href="">豆瓣广告</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script src="/static/js/jquery-1.11.1.js"></script>
+<script src="/static/js/index.js"></script>
+
+</html>

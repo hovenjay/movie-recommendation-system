@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ movie.title }}</title>
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/movie.css">
+</head>
+
+<body>
+    <!-- 豆瓣网的首部 -->
+    <div id="db-global-nav" class="global-nav">
+        <div class="bd">
+            <div class="top-nav-info">
+                <a href="" id="login_status1" class="nav-login">登录</a>
+                <a href="" id="login_status2" class="nav-register">注册</a>
+            </div>
+            <div class="top-nav-doubanapp">
+                <a href="" class="lnk-doubanapp">下载豆瓣客户端</a>
+                <div id="top-nav-appintro" class="more-items">
+                    <p class="appintro-title">豆瓣</p>
+                    <p class="qrcode">扫码直接下载</p>
+                    <div class="download">
+                        <a href="">iPhone</a>
+                        <span>·</span>
+                        <a href="" class="download-android">Android</a>
+                    </div>
+                    <div id="doubanapp-tip">
+                        <a href="" class="tip-link">豆瓣 5.0 全新发布</a>
+                        <a href="javascript: void 0;" class="tip-close">×</a>
+                    </div>
+                </div>
+            </div>
+            <div class="global-nav-items">
+                <ul>
+                    <li class="">
+                        <a href="/">豆瓣</a>
+                    </li>
+                    <li class="">
+                        <a href="/">读书</a>
+                    </li>
+                    <li class="on">
+                        <a href="/">电影</a>
+                    </li>
+                    <li class="">
+                        <a href="/">音乐</a>
+                    </li>
+                    <li class="">
+                        <a href="/">同城</a>
+                    </li>
+                    <li class="">
+                        <a href="/">小组</a>
+                    </li>
+                    <li class="">
+                        <a href="/">阅读</a>
+                    </li>
+                    <li class="">
+                        <a href="/">FM</a>
+                    </li>
+                    <li class="">
+                        <a href="/">时间</a>
+                    </li>
+                    <li class="">
+                        <a href="">豆品</a>
+                    </li>
+                    <li>
+                        <a href="#more" class="bn-more">
+                            <span>更多</span>
+                        </a>
+                        <div class="more-items">
+                            <table cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="/">豆瓣摄影</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 搜索部分 -->
+    <div id="db-nav-movie" class="nav">
+        <div class="nav-wrap">
+            <div class="nav-primary">
+                <div class="nav-logo">
+                    <a href="/">豆瓣电影</a>
+                </div>
+                <div class="nav-search">
+                    <form action="#" method="get">
+                        <fieldset>
+                            <legend>搜索：</legend>
+                            <label for="inp-query">
+                            </label>
+                            <div class="inp">
+                                <input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="搜索电影、电视剧、综艺、影人" value="" autocomplete="off">
+                            </div>
+                            <div class="inp-btn">
+                                <input type="submit" value="搜索">
+                            </div>
+                            <input type="hidden" name="cat" value="1002">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="nav-secondary">
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <a href="/">影讯&amp;购票</a>
+                    </li>
+                    <li>
+                        <a href="/">选电影</a>
+                    </li>
+                    <li>
+                        <a href="/">电视剧</a>
+                    </li>
+                    <li>
+                        <a href="/">排行榜</a>
+                    </li>
+                    <li>
+                        <a href="/">分类</a>
+                    </li>
+                    <li>
+                        <a href="/">影评</a>
+                    </li>
+                    <li>
+                        <a href="/">2017年度榜单</a>
+                    </li>
+                    <li>
+                        <a href="/">2017观影报告</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 主要部分 -->
+    <div id="wrapper">
+        <!-- 中间部分 -->
+        <div id="content">
+            <h1>
+                <span property="v:itemreviewed">{{ movie.title }}</span>
+                {% if movie.year %}
+                <span class="year">({{ movie.year }})</span>
+                {% endif %}
+            </h1>
+            <div class="grid-16-8 clearfix">
+                <div class="article">
+                    <div class="indent clearfix">
+                        <div class="subjectwrap clearfix">
+                            <div class="subject clearfix">
+                                <div id="mainpic" class="">
+                                    <a class="nbgnbg" href="#" title="点击看更多海报">
+                                        <img src="{{ movie.strb }}" title="点击看更多海报" alt="{{ movie.title}}" rel="v:image">
+                                    </a>
+                                </div>
+                                <div id="info">
+                                    <span>
+                                        <span class="pl">导演</span>:
+                                        <span class="attrs">
+                                            {% for direct in movie.director%}
+                                            <a href="#" rel="v:directedBy">{{direct}}</a>
+                                            {%if not loop.last %} \ {%endif%} {% endfor %}
+                                        </span>
+                                    </span>
+                                    <br> {% if movie.writer%}
+                                    <span>
+                                        <span class="pl">编剧</span>:
+                                        <span class="attrs">
+                                            {% for write in movie.writer%}
+                                            <a href="#">{{write}}</a>
+                                            {%if not loop.last %} \ {%endif%} {%endfor%}
+                                        </span>
+                                    </span>
+                                    <br> {% endif %} {% if movie.starring %}
+                                    <span class="actor">
+                                        <span class="pl">主演</span>:
+                                        <span class="attrs">
+                                            {% for star in movie.starring[:6]%}
+                                            <span>
+                                                <a href="" rel="v:starring">{{star}}</a>
+                                            </span>
+                                            {%if not loop.last %} \ {%endif%} {% endfor%} {% if movie.starring[6]%} {% for star in movie.starring[6:]%}
+                                            <span style="display: none;">
+                                                \
+                                                <a href="" rel="v:starring">{{star}}</a>
+                                            </span>
+                                            {%if loop.last %}
+                                            <a id='a' href="javascript:;" class="more-actor" title="更多主演" onclick="showMore(this);">更多...</a>
+                                            {% endif %} {% endfor%} {%endif%}
+                                        </span>
+                                    </span>
+                                    <script>
+                                        function showMore(obj) {
+                                            var showobj = obj.parentNode.getElementsByTagName("span");
+                                            for (var i = 5; i < showobj.length; i++) {
+                                                showobj[i].style.display = "inline";
+                                            };
+                                            obj.style.display = "none"
+                                        }
+                                    </script>
+                                    <br> {% endif%} {% if movie.classification %}
+                                    <span class="pl">类型:</span>
+                                    {% for classifcation in movie.classification%}
+                                    <span property="v:genre">{{ classifcation }}</span>
+                                    {%if not loop.last %} \ {%endif%} {% endfor %}
+                                    <br> {% endif %} {% if movie.country %}
+                                    <span class="pl">制片国家/地区:</span> {% for country in movie.country %} {{country}} {%if not loop.last %}
+                                    \ {%endif%} {% endfor %}
+                                    <br> {% endif %} {% if movie.country %}
+                                    <span class="pl">语言:</span>
+                                    {% for language in movie.language %} {{language}} {%if not loop.last %} \ {%endif%} {% endfor%}
+                                    <br> {% endif %} {% if movie.release_date %}
+                                    <span class="pl">上映日期:</span>
+                                    {%for release_date in movie.release_date %}
+                                    <span property="v:initialReleaseDate" content="{{release_date}}">{{release_date}}</span>
+                                    {%if not loop.last %} \ {%endif%} {%endfor%}
+                                    <br> {% endif %} {% if movie.film_length %}
+                                    <span class="pl">片长:</span>
+                                    {% for film_length in movie.film_length %}
+                                    <span property="v:runtime" content="118">{{film_length}}</span>
+                                    {%if not loop.last %} \ {%endif%} {% endfor %}
+                                    <br> {% endif %} {% if movie.alias %}
+                                    <span class="pl">又名: {% for alias in movie.alias %}
+                                    </span> {{alias}} {%if not loop.last %} \ {%endif%} {%endfor%}
+                                    <br> {% endif %} {% if movie.IMDb %}
+                                    <span class="pl">IMDb链接:</span>
+                                    <a href="http://www.imdb.com/title/{{movie.IMDb}}" rel="nofollow">{{movie.IMDb}}</a>
+                                    <br> {% endif %}
+                                </div>
+                            </div>
+                            <div id="interest_sectl">
+                                <div class="rating_wrap clearbox" rel="v:rating">
+                                    <div class="clearfix">
+                                        <div class="rating_logo ll">
+                                            豆瓣评分
+                                        </div>
+                                    </div>
+                                    <div class="rating_self clearfix" typeof="v:Rating">
+                                        <strong class="ll rating_num" property="v:average">{{ movie.score }}</strong>
+                                        <span property="v:best" content="10.0"></span>
+                                        {% if movie.vister%}
+                                        <div class="rating_right ">
+                                            <div class="ll bigstar bigstar35"></div>
+                                            <div class="rating_sum">
+                                                <a href="collections" class="rating_people">
+                                                    <span property="v:votes">{{ movie.vister}}</span>人评价</a>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                                {% if movie.ratio%}
+                                <div class="rating_betterthan">
+                                    {% for ratio in movie.ratio%} 好于
+                                    <a href="">{{ ratio }}</a>
+                                    <br> {% endfor%}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div id="interest_sect_level">
+                        <a href="" class="colbutt">
+                            <span>想看</span>
+                        </a>
+                        <a href="{{url_for('addVited',sub = movie.subject)}}" class="colbutt">
+                            <span>看过</span>
+                        </a>
+                    </div>
+                    {% if movie.introduction%}
+                    <div class="related-info" style="margin-bottom:-10px;">
+                        <a name="intro"></a>
+                        <h2>
+                            <i class="">{{ movie.title }}的剧情简介</i>
+                            · · · · · ·
+                        </h2>
+                        <div class="indent" id="link-report">
+
+                            <span property="v:summary" class="">
+                                &nbsp;&nbsp;&nbsp;&nbsp; {{movie.introduction|safe}}
+                            </span>
+                            <span class="pl">
+                                <a href="/">©豆瓣</a>
+                            </span>
+                        </div>
+                    </div>
+                    {% endif %} {% if suggestMovie%}
+                    <div id="recommendations" class="">
+                        <h2>
+                            <i class="">喜欢这部电影的人也喜欢</i>
+                            · · · · · ·
+                        </h2>
+                        <div class="recommendations-bd">
+                            {% for sugesst in suggestMovie %}
+                            <dl class="">
+                                <dt>
+                                    <a href="{{url_for('subject',sub = sugesst.subject)}}">
+                                        <img src="{{ sugesst.strb }}" alt="{{sugesst.title}}" class="">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="{{url_for('subject',sub = sugesst.subject)}}" class="">{{sugesst.title}}</a>
+                                </dd>
+                            </dl>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="aside" style="position: static; left: 931.5px; right: auto; top: auto; bottom: 300px;">
+                    {% if movie.common_label %}
+                    <div class="tags">
+                        <h2>
+                            <i class="">豆瓣成员常用的标签</i>
+                            · · · · · ·
+                        </h2>
+                        <div class="tags-body">
+                            {% for common_label in movie.common_label %}
+                            <a href="/tag/{{common_label}}" class="">{{ common_label }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %} {% if same_like_movie[0] %}
+                    <div id="subject-others-likers">
+                        <h2>
+                            <i class="">猜你喜欢</i>
+                            · · · · · ·
+                        </h2>
+                        <div class="subject-others">
+                            {% for sameLikeMovie in same_like_movie%}
+                            <dl class="">
+                                <dt>
+                                    <a href="{{url_for('subject',sub = sameLikeMovie.subject)}}">
+                                        <img src="{{sameLikeMovie.strb}}" alt="{{sameLikeMovie.title}}" class="">
+                                    </a>
+                                </dt>
+                                <dd>
+                                    <a href="{{url_for('subject',sub = sameLikeMovie.subject)}}" class="">{{sameLikeMovie.title}}</a>
+                                </dd>
+                            </dl>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div id="subject-others-interests">
+                        {% if vistedUsers%}
+                        <h2>
+                            <i class="">谁在看这部电影</i>
+                            · · · · · ·
+                        </h2>
+                        <ul class="">
+                            {% for user in vistedUsers%}
+                            <li class="">
+                                <a href="/" class="others-interest-avatar">
+                                    <img src="{{ url_for('static', filename='img/u64083576-2.jpg') }}" class="pil" alt="{{vistedUsers}}">
+                                </a>
+                                <div class="others-interest-info">
+                                    <a href="/" class="">{{user}}</a>
+                                    <div class="">
+                                        4分钟前 看过
+                                        <span class="allstar40" title="推荐"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif%}
+                        <div class="subject-others-interests-ft">
+                            {% if movie.seen_quantity %}
+                            <a href="/">{{ movie.seen_quantity}}人看过</a> &nbsp;/&nbsp; {% endif%} {% if movie.want_to_see %}
+                            <a href="/">{{ movie.want_to_see}}人想看</a>
+                            {% endif%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div id="footer">
+            <span id="icp" class="fleft gray-link">
+                © 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司
+            </span>
+            <a href="#" style="display: none;"></a>
+            <span class="fright">
+                <a href="#">关于豆瓣</a>
+                ·
+                <a href="#">在豆瓣工作</a>
+                ·
+                <a href="#">联系我们</a>
+                ·
+                <a href="#">免责声明</a>
+                ·
+                <a href="#">帮助中心</a>
+                ·
+                <a href="#">手机音乐</a>
+                ·
+                <a href="#">豆瓣广告</a>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script src="/static/js/jquery-1.11.1.js"></script>
+<script src="/static/js/movie.js"></script>
+
+</html>

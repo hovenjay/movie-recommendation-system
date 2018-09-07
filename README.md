@@ -24,9 +24,9 @@
   - 按评分升序或降序排列电影；
   - 浏览单部影片的详细信息；
 - 个性化推荐算法
-  -  相似推荐：根据用户正在浏览的电影，推荐相似的电影；
-  -  猜你喜欢：根据用户的观影记录，推荐用户喜欢看的电影；
-  -  喜欢这部电影的人也喜欢：根据当前用户的观影记录，推荐有着相似观影记录的用户看的最多的电影；
+  - 相似推荐：根据用户正在浏览的电影，推荐相似的电影；
+  - 猜你喜欢：根据用户的观影记录，推荐用户喜欢看的电影；
+  - 喜欢这部电影的人也喜欢：根据当前用户的观影记录，推荐有着相似观影记录的用户看的最多的电影；
 
 ### 1.3 数据访问层
 
@@ -56,22 +56,21 @@
 
 UI 表示层是完全仿照豆瓣电影的风格制作的页面，主要有以下几个页面：
 
-- 电影分类查询页；
+- 电影分类查询页：
 
-  ![](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page1.png)
+  ![电影分类查询页](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page1.png)
 
-- 影片详情页；
+- 影片详情页：
 
-  ![](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page2.png)
+  ![影片详情页](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page2.png)
 
-- 登陆注册页；
+- 登陆注册页：
 
-  ![](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page3.png)
+  ![登陆注册页](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page3.png)
 
-- 豆瓣 404 ；
+- 豆瓣 404 页：
 
-  ![](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page4.png)
-
+  ![豆瓣 404 页](https://github.com/hovenjay/MovieRecommendationSystem/blob/master/static/img/page4.png)
 
 ## 2. 效果展示
 

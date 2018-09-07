@@ -1,4 +1,6 @@
-# MovieRecommendationSystem
+# Movie Recommendation System Based on Python
+
+# 基于 Python 的电影推荐系统
 
 ## 1. 项目简介
 

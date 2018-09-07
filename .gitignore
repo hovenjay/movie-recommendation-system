@@ -103,5 +103,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+# IDEA
+.idea
+MovieRecommendationSystem.iml
+
 # 爬虫爬取的文件
 spider/SourceData
